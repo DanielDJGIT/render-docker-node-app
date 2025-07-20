@@ -1,4 +1,13 @@
-"scripts": {
-  "start": "node app.js"
+{
+  "name": "render-docker-node-app",
+  "version": "1.0.0",
+  "description": "Stylish DevOps portfolio with resume viewer and download",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }
 
