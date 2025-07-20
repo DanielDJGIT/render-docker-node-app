@@ -45,6 +45,10 @@ Daniel Joseph Raj Kalaiselvan
 📧 daniel.k358@yahoo.com
 📞 +91 9360320278
 
+Output
+<img width="1487" height="825" alt="Screenshot 2025-07-21 at 1 58 04 AM" src="https://github.com/user-attachments/assets/555d71ab-a629-41d7-8d6f-3e288d94d2dd" />
+
+
 
 
 
