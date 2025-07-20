@@ -1,0 +1,60 @@
+# 💼 Daniel Joseph Raj Kalaiselvan – DevOps Portfolio
+
+This is my personal portfolio website, built using Node.js and Express, styled with HTML/CSS, and deployed via Docker on Render. It showcases my DevOps experience, certifications, and projects — with a downloadable resume and light/dark mode toggle.
+
+---
+
+## 🔥 Features
+
+- 👤 Clean resume-style webpage with profile photo
+- 📄 Downloadable PDF resume
+- 🌙 Dark mode / ☀️ Light mode toggle
+- 🚀 Fully responsive layout
+- 🛠 Project descriptions with GitHub links
+- 📦 Dockerized for easy deployment
+- ☁️ Live on [Render](https://render.com)
+
+---
+
+## 🛠️ Tech Stack
+
+- Frontend: HTML, CSS
+- Backend: Node.js + Express
+- Containerization: Docker
+- Deployment: Render.com
+- DevOps Tools: Git, GitHub, AWS (used in projects)
+
+---
+
+## 🚀 Projects Showcased
+
+| Project | Description | GitHub |
+|--------|-------------|--------|
+| Calculator App with AWS CI/CD | Frontend calculator app auto-deployed via AWS CodePipeline | [🔗 Repo](https://github.com/yourusername/aws-calculator-cicd) |
+| Form Submission CI/CD Site | PHP/MySQL app deployed via AWS CI/CD pipeline | [🔗 Repo](https://github.com/yourusername/aws-form-ci-cd) |
+| Static Website on S3 | Portfolio website hosted on S3 with CloudFront & Route 53 | [🔗 Repo](https://github.com/yourusername/aws-static-site) |
+| Web App CI/CD Pipeline | Full deployment pipeline using CodeBuild, CodeDeploy | [🔗 Repo](https://github.com/yourusername/aws-cicd-webapp) |
+
+---
+
+## 🖥️ How to Run Locally (via Docker)
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/render-docker-node-app.git
+   cd render-docker-node-app
+
+
+📬 Contact
+Daniel Joseph Raj Kalaiselvan
+📧 daniel.k358@yahoo.com
+📞 +91 9360320278
+
+
+
+
+---
+
+
+
+
