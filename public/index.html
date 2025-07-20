@@ -1,31 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Daniel Joseph Raj Kalaiselvan – Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
-    body { font-family: Arial, sans-serif; padding: 20px; max-width: 900px; margin: auto; background: #fdfdfd; color: #333; }
-    h1, h2 { color: #2c3e50; }
-    h1 { font-size: 2em; }
-    .section { margin-bottom: 30px; }
-    ul { padding-left: 20px; }
+    :root {
+      --bg-color: #fdfdfd;
+      --text-color: #333;
+      --link-color: #007BFF;
+      --border-color: #007BFF;
+    }
+
+    body.dark {
+      --bg-color: #121212;
+      --text-color: #e0e0e0;
+      --link-color: #80bdff;
+      --border-color: #80bdff;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+      background: var(--bg-color);
+      color: var(--text-color);
+      transition: all 0.3s ease;
+    }
+
+    h1, h2 {
+      color: var(--text-color);
+    }
+
+    .contact {
+      font-size: 0.95em;
+      margin-bottom: 20px;
+    }
+
+    .contact a {
+      color: var(--link-color);
+      text-decoration: none;
+    }
+
+    .section {
+      margin-bottom: 30px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
     a.download-btn {
       display: inline-block;
       padding: 10px 20px;
-      background-color: #007BFF;
+      background-color: var(--link-color);
       color: white;
       border-radius: 5px;
       text-decoration: none;
     }
+
     a.download-btn:hover {
       background-color: #0056b3;
     }
-    .contact { margin-top: 10px; font-size: 0.9em; color: #555; }
-    .contact a { color: #007BFF; text-decoration: none; }
+
+    img.profile {
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid var(--border-color);
+      float: right;
+      margin-left: 20px;
+      margin-bottom: 20px;
+    }
+
+    .toggle-container {
+      text-align: right;
+      margin-bottom: 10px;
+    }
+
+    .toggle-container button {
+      background: none;
+      border: 1px solid var(--link-color);
+      color: var(--link-color);
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .toggle-container button:hover {
+      background: var(--link-color);
+      color: white;
+    }
+
+    @media (max-width: 600px) {
+      img.profile {
+        float: none;
+        display: block;
+        margin: 0 auto 20px;
+      }
+    }
   </style>
 </head>
 <body>
+
+  <div class="toggle-container">
+    <button id="toggleMode">🌙 Dark Mode</button>
+  </div>
+
+  <img src="profile.jpg" alt="Daniel Joseph Raj Kalaiselvan" class="profile" />
 
   <h1>Daniel Joseph Raj Kalaiselvan</h1>
   <div class="contact">
@@ -63,9 +147,9 @@
     <h2>Projects</h2>
     <ul>
       <li>Hosted Static Website on AWS</li>
-      <li>CI/CD Pipeline for Website Deployment (AWS)</li>
+      <li>CI/CD Pipeline for Website Deployment using CodeBuild, CodeDeploy, EC2</li>
       <li>Calculator Web App with Full AWS CI/CD</li>
-      <li>Form Submission App with AWS + Open Source Stack</li>
+      <li>Form Submission Web App with PHP/MySQL and CI/CD Pipeline</li>
     </ul>
   </div>
 
@@ -83,7 +167,7 @@
     <h2>Skills</h2>
     <ul>
       <li><strong>Cloud:</strong> AWS (IAM, VPC, EC2, S3, CloudFront, CloudFormation)</li>
-      <li><strong>DevOps:</strong> CI/CD, GitHub, CodeBuild, CodeDeploy</li>
+      <li><strong>DevOps:</strong> Git, GitHub, CI/CD, Docker, CodePipeline</li>
       <li><strong>Languages:</strong> SQL, Bash, English</li>
     </ul>
   </div>
@@ -91,6 +175,24 @@
   <div class="section">
     <a class="download-btn" href="/resume.pdf" download>📥 Download Resume (PDF)</a>
   </div>
+
+  <script>
+    const toggleBtn = document.getElementById('toggleMode');
+    const body = document.body;
+
+    // Load preference
+    if (localStorage.getItem('theme') === 'dark') {
+      body.classList.add('dark');
+      toggleBtn.innerText = '☀️ Light Mode';
+    }
+
+    toggleBtn.addEventListener('click', () => {
+      body.classList.toggle('dark');
+      const isDark = body.classList.contains('dark');
+      toggleBtn.innerText = isDark ? '☀️ Light Mode' : '🌙 Dark Mode';
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    });
+  </script>
 
 </body>
 </html>
