@@ -37,12 +37,7 @@ This is my personal portfolio website, built using Node.js and Express, styled w
 
 ---
 
-## 🖥️ How to Run Locally (via Docker)
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/render-docker-node-app.git
-   cd render-docker-node-app
 
 
 📬 Contact
