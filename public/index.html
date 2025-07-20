@@ -29,8 +29,13 @@
       transition: all 0.3s ease;
     }
 
-    h1, h2 {
+    h1, h2, h3 {
       color: var(--text-color);
+    }
+
+    h1 {
+      font-size: 2em;
+      margin-bottom: 5px;
     }
 
     .contact {
@@ -145,11 +150,35 @@
 
   <div class="section">
     <h2>Projects</h2>
+
+    <h3>📦 Calculator Web Application with Full AWS CI/CD</h3>
     <ul>
-      <li>Hosted Static Website on AWS</li>
-      <li>CI/CD Pipeline for Website Deployment using CodeBuild, CodeDeploy, EC2</li>
-      <li>Calculator Web App with Full AWS CI/CD</li>
-      <li>Form Submission Web App with PHP/MySQL and CI/CD Pipeline</li>
+      <li>Responsive calculator app using HTML, CSS, JavaScript.</li>
+      <li>CI/CD using AWS CodePipeline, CodeBuild, CodeDeploy.</li>
+      <li>Zero-downtime deployment on EC2 using GitHub webhooks.</li>
+      <li>Security configured with IAM roles, Health checks for auto rollback.</li>
+    </ul>
+
+    <h3>📝 Form Filling Website with Full CI/CD Pipeline</h3>
+    <ul>
+      <li>Dynamic form with PHP backend and MySQL database.</li>
+      <li>CI/CD integrated via GitHub and AWS services.</li>
+      <li>EC2 hosted backend, RDS for DB, S3 for versioning artifacts.</li>
+      <li>Automatic deployments on every Git push.</li>
+    </ul>
+
+    <h3>🌐 Static Website Hosting on AWS S3</h3>
+    <ul>
+      <li>Portfolio site hosted on S3 with static hosting configuration.</li>
+      <li>Secured and accelerated using CloudFront CDN.</li>
+      <li>Route 53 used for custom domain and HTTPS via ACM.</li>
+    </ul>
+
+    <h3>🚀 CI/CD Pipeline for Web App Deployment</h3>
+    <ul>
+      <li>End-to-end pipeline with GitHub + AWS CI/CD stack.</li>
+      <li>Custom buildspec.yml, rollback support, CloudWatch logging.</li>
+      <li>Deployed and monitored on EC2 with robust security setup.</li>
     </ul>
   </div>
 
@@ -180,7 +209,6 @@
     const toggleBtn = document.getElementById('toggleMode');
     const body = document.body;
 
-    // Load preference
     if (localStorage.getItem('theme') === 'dark') {
       body.classList.add('dark');
       toggleBtn.innerText = '☀️ Light Mode';
